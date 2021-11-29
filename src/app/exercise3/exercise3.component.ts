@@ -1,12 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 
 @Component({
-  selector: 'app-exercise3',
+  selector: "app-exercise3",
   template: `
-      <main>
-        <header>
-          <h1>Site</h1>
-        </header>
+    <main>
+      <header>
+        <h1>Site</h1>
+      </header>
+      <div class="content">
         <section>
           <article>
             <h2>Title</h2>
@@ -22,38 +23,50 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
             <h3>Right-Side</h3>
           </div>
         </aside>
-      </main>
+      </div>
+    </main>
   `,
-  styles: [`
-    header {
-      background: lightblue;
-    }
-    section {
-      background: lightgreen;
-      width: 60%;
-      float: left;
-    }
-    article {
-      background: white;
-      margin: 0 0 1rem 0;
-    }
-    aside {
-      background: pink;
-      width: 40%;
-      height: 100%;
-      float: right;
-    }
-    header, article, section, .module {
-      padding: 1rem;
-    }
-  `],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styles: [
+    `
+      main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+      }
+      header {
+        background: lightblue;
+      }
+      .content {
+        display: flex;
+        flex-grow: 1;
+      }
+      section {
+        background: lightgreen;
+        width: 60%;
+      }
+      article {
+        background: white;
+        margin: 0 0 1rem 0;
+      }
+      aside {
+        background: pink;
+        width: 40%;
+        /* height: 100%; */
+        align-self: stretch;
+      }
+      header,
+      article,
+      section,
+      .module {
+        padding: 1rem;
+      }
+    `,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Exercise3Component implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
