@@ -1,17 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-exercise4',
+  selector: "app-exercise4",
   template: `
-    <button class="checkout-btn">Checkout</button>
+    <div class="button-container">
+      <button onClick=" clickBtn " class="checkout-btn">
+        <i
+          *ngIf="leftIcon"
+          class="
+         {{ leftIcon }}"
+        ></i>
+        {{ buttonTitle }}
+        <i
+          *ngIf="rightIcon"
+          class="
+         {{ rightIcon }}"
+        ></i>
+      </button>
+    </div>
   `,
-  styleUrls: ['./exercise4.component.scss']
+  styleUrls: ["./exercise4.component.scss"],
 })
 export class Exercise4Component implements OnInit {
+  @Input() buttonTitle: string = "";
+  @Input() clickBtn?: any;
+  @Input() leftIcon?: string;
+  @Input() rightIcon?: string;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

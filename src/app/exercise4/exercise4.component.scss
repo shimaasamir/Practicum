@@ -1,2 +1,38 @@
-$width: 250px;
-$hight: 50px;
+.button-container {
+  background-image: linear-gradient(to bottom, #b0b0b0 0%, #dfdfdf 60%);
+  padding: 7px;
+  border-radius: 10px;
+  border: 1px solid #555555;
+  box-sizing: border-box;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .checkout-btn {
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+    color: #555555;
+    font-weight: bold;
+    border-width: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    background-image: linear-gradient(to top, #b0b0b0 0%, #dfdfdf 60%);
+    box-shadow: -1px 4px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 4px 8px 0px rgba(0, 0, 0, 0.75);
+  }
+  &:hover {
+    background-image: linear-gradient(to top, #b0b0b0 0%, #dfdfdf 60%);
+    .checkout-btn {
+      box-shadow: -1px 5px 8px 0px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: -1px 5px 8px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: -1px 5px 8px 0px rgba(0, 0, 0, 0.75);
+    }
+  }
+}
