@@ -1,0 +1,73 @@
+$ancore-left: 50px;
+$ancore-top: 50px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hand {
+    padding: 150px;
+    background-color: #79c37f;
+    position: relative;
+}
+
+.card {
+    top: $ancore-top;
+    left: $ancore-left;
+    position: absolute;
+    margin-right: 10px;
+    width: 150px;
+    height: 220px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+
+    p {
+        text-align: center;
+        font: 100px/220px Georgia, Times New Roman, serif;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.suitdiamonds, .suithearts {
+    color: #ff0000;
+}
+.suitdiamonds:before,
+.suitdiamonds:after {
+    content: "♦";
+}
+.suithearts:before,
+.suithearts:after {
+    content: "♥";
+}
+.suitclubs, .suitspades {
+    color: #000;
+}
+.suitclubs:before,
+.suitclubs:after {
+    content: "♣";
+}
+
+.suitspades:before,
+.suitspades:after {
+    content: "♠";
+}
+
+div[class*="suit"]:before {
+    position: absolute;
+    font-size: 35px;
+    left: 5px;
+    top: 5px;
+}
+
+div[class*="suit"]:after {
+    position: absolute;
+    font-size: 35px;
+    right: 5px;
+    bottom: 5px;
+}

@@ -1,0 +1,7 @@
+<div class="hand spread">
+  <div *ngFor="let card of cards" class="card {{card.kind}}"
+        [class.selected]="card.kind === selected"
+        (click)="select(card.kind)">
+        <p>{{ card.value }}</p>
+  </div>
+</div>

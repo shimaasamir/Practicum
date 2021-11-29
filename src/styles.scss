@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+$coral: hsl(23, 83%, 82%);
+$coral--b: hsl(23, 99%, 75%);
+$pink: hsl(335, 52%, 92%);
+$pink--b: hsl(335, 82%, 86%);
+$yellow: hsl(42, 97%, 85%);
+$yellow--b: hsl(42, 100%, 73%);
+$green: hsl(100, 64%, 86%);
+$green--b: hsl(100, 41%, 76%);
+$blue: hsl(187, 61%, 79%);
+$blue--b: hsl(187, 54%, 68%);
+$purple: hsl(283, 24%, 86%);
+$purple--b: hsl(283, 43%, 80%);
+$light-gray-blue: hsl(182, 29%, 96%);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+}
+
+.section-container:nth-child(2n) {
+    background-color: $light-gray-blue;
+}
+
+.section-container {
+    padding: 8rem 4rem;
+}
+
+.meta {
+    text-align: center;
+    padding: 4rem;
+    margin: 0 auto;
+
+    h1 {
+        font-weight: 300;
+        display: block;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+    }
+}
+
+.ex-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 2rem;
+}
+
+.ex-container {
+    resize: both;
+    position: relative;
+    overflow: hidden;
+    height: fit-content;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 0 20px -10px hsl(187deg 97% 24%);
+    display: grid;
+    align-items: center;
+    background: white;
+}
+
+h4 {
+    margin-left: 18px;
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+
+    ~p {
+        margin-top: 8px;
+        margin-bottom: 20px;
+    }
+}
+
+p {
+    font-size: 1.2rem;
+    margin-left: 40px;
+}
+
+.img-example {
+    width: 100%;
+}
+
+.placeholder {
+    width: fit-content;
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(151, 151, 151);
+}
